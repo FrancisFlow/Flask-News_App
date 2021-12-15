@@ -1,14 +1,18 @@
 from flask import Flask
+from flask_bootstrap import Bootstrap
+from config import config_options
 
-from config import DevConfig
+bootstrap = Bootstrap()
 
 #initialization of application
 
 app= Flask(__name__, instance_relative_config = True)
 
+# Creating the app configurations
+app.config.from_object(config_options[config_name])
 
-#configuration set up
-app.config.from_object(DevConfig)
-app.config.from_pyfile('config.py')
+#initializing bootstrap extension
+bootstrap.init_app(app)
 
-from app import views
+
+from .main import views
