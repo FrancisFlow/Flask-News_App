@@ -1,9 +1,9 @@
 from flask import render_template, request, redirect, url_for
 from ..requests import get_sources
-from models import Source,Articles
-from app import app
+from ..models import Source,Articles
+from . import main
 
-@app.route("/")
+@main.route("/")
 def index():
     """
     view root page function

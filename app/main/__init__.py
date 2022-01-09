@@ -4,7 +4,6 @@ from config import config_options
 from flask import Flask
 from flask_bootstrap import Bootstrap, bootstrap_find_resource
 main = Blueprint('main', __name__)
-from . import views, errors
 
 
 def create_app(config_name):
@@ -24,3 +23,6 @@ def create_app(config_name):
    app.register_blueprint(main_blueprint)
 
    return app
+
+
+   from . import views, errors
