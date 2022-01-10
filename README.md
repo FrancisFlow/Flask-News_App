@@ -21,8 +21,8 @@ To make advancements/modifications, follow these steps:
 ## Technologies Used
 1. Python v3.8
 2. Flask-Bootstrap
-3.HTML
-4.Flask
+3. HTML
+4. Flask
 
 ## Support and contact details
 
