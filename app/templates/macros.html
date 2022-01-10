@@ -1,5 +1,5 @@
 {%  macro displaySourcesList(source_list) %}
-   {% for source_row in source_list %}
+   {% for source_row in source_list | batch(3)%}
 
    <div class="row">
        {% for source in source_row %}
@@ -15,17 +15,21 @@
 
             <div class="panel-body" >
                 <p>
-                    {{ source.description }}
+                    {{ source.description | truncate(120)}}
                 </p>
                 <a href="/source/{{source.id}}">
                     View Articles
                 </a>
             </div>
-        </div>
+
+         </div>
 
        </div>
-       {%endfor%}
+
+   {%endfor%}
+
    </div>
+
    {% endfor %}
 
 {% endmacro %}

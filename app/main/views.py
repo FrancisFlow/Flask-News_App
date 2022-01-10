@@ -11,11 +11,13 @@ def index():
 
     #getting sources
     tech_sources = get_sources('technology')
+    business_sources = get_sources('business')
+    general_sources = get_sources('general')
     title = 'News Flow'
-    return render_template('index.html', title = title, technology=tech_sources)
+    return render_template('index.html', title = title, general = general_sources, business = business_sources, technology=tech_sources)
 
 
-@main.route('/source/<id>', ['GET', 'POST'])
+@main.route('/source/<id>')
 def articles(id):
     """
     function to return articles

@@ -7,19 +7,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{title}}</title>
 </head>
 <body>
 
     {% block content %}
     <div>
+
+        <h3>
+            Top News
+        </h3>
+        <ul>
+            {{ macro.displaySourcesList(general) }}
+        </ul>
+        <hr>
+
         <h3>Technology news</h3>
         <ul>
-            {% for tech_source in technology %}
-                <li>{{ tech_source.name}}</li>
-            {% endfor %}
             {{ macro.displaySourcesList(technology)}}
         </ul>
+        <hr>
+        <h3>Business News</h3>
+        <ul>
+            {{ macro.displaySourcesList(business)}}
+        </ul>
+
     </div>
 
     {% endblock %}
