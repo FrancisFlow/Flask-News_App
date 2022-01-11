@@ -20,9 +20,10 @@ To make advancements/modifications, follow these steps:
 
 ## Technologies Used
 1. Python v3.8
-2. Flask-Bootstrap
-3. HTML
-4. Flask
+2. Flask==1.1.2
+3. HTML5
+4. Css3
+5. Flask-Bootstrap==3.3.7.1
 
 ## Support and contact details
 
